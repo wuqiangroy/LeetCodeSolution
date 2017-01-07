@@ -29,13 +29,6 @@ class Solution(object):
             for n2 in range(n1+1, len(self.lst)):
                 if self.lst[n1] + self.lst[n2] == self.target:
                     return [n1, n2]
-
-
-lst = [1, 3, 5, 6, 7, 8, 9]
-target = 11
-s = Solution(lst, target)
-print s.TwoSum()
-
 # 2
 
 
@@ -57,6 +50,17 @@ class Solution2(object):
                 # 确定后者肯定大于前者，因为n是从第0位开始找，没找到才会越来越大
             n += 1
 
-s2 = Solution2(lst, target)
-print s2.TwoSum()
+if __name__ == '__main__':
+    from timeit import Timer
+    lst = [1, 3, 5, 6, 7, 8, 9]
+    target = 11
+    s = Solution(lst, target)
+    print s.TwoSum()
+    s2 = Solution2(lst, target)
+    print s2.TwoSum()
+
+    t1 = Timer(lambda: s.TwoSum())
+    t2 = Timer(lambda: s2.TwoSum())
+    print t1.timeit(1000000)
+    print t2.timeit(1000000)
 
