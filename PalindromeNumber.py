@@ -2,7 +2,7 @@
 # _*_ coding:utf-8 _*_
 """
 Determine whether an integer is a palindrome. Do this without extra space.
-确定一个数是否为回文数，不适用额外空间
+确定一个数是否为回文数，不使用额外空间
 """
 
 
