@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
-
+# 目前bug：重复没有按照list嵌套list方式return
+# 2017.1.8 18:40
 """
 Given an array S of n integers,
 are there elements a, b, c in S such that a + b + c = 0?
