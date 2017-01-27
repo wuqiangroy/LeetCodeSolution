@@ -12,14 +12,15 @@ Follow up: Could you solve it without loops/recursion?
 """
 
 
-def power_of_four(n):
-    if n == 4:
+def power_of_four(num):
+    if num < 0:
+        return 'false'
+    if int(num**0.25) == num**0.25:
         return 'true'
-    if n % 4 == 0:
-        return power_of_four(n/4)
     else:
         return 'false'
 
+
 if __name__ == '__main__':
-    n = 3
+    n = 16
     print power_of_four(n)
