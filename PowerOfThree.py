@@ -10,14 +10,13 @@ Could you do it without using any loop / recursion?
 
 
 def power_of_three(num):
-    if num == 1:
+    num = abs(num)
+    n = float(1) / 3
+    if int(num**n) == num**n:
         return 'true'
-    if num % 3 == 0:
-        return power_of_three(num/3)
     else:
         return 'false'
 
-
 if __name__ == '__main__':
-    num = 28
+    num = -8
     print power_of_three(num)
