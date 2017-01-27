@@ -7,12 +7,16 @@ Given an integer, write a function to determine if it is a power of two.
 
 
 def power_of_two(num):
-    if num == 1:
-        return 'true'
-    if num % 2 == 0:
-        return power_of_two(num/2)
-    return 'false'
+    if num < 0:
+        return 'false'
+    flag = True
+    while flag:
+        if int(num**0.5) == num**0.5:
+            flag = False
+        else:
+            return 'false'
+    return 'true'
 
 if __name__ == '__main__':
-    num = 128
+    num = 64
     print power_of_two(num)
